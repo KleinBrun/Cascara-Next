@@ -1,0 +1,19 @@
+// Definición del modelo de clientes
+model Customer {
+    id        Int       @id @default(autoincrement())
+    name      String
+    email     String
+    image_url String?
+    invoices  Invoice[]
+}
+
+// Definición del modelo de la tabla Invoices
+model Invoice {
+    id          Int       @id @default(autoincrement())
+    customer_id Int
+    amount      Float
+    status      String
+    date        DateTime
+    Customer    Customer? @relation(fields: [customerId], references: [id])
+    customerId  Int?
+}
