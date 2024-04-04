@@ -7,6 +7,27 @@ import { redirect } from 'next/navigation';
 import { signIn } from '@/auth';
 import { AuthError } from 'next-auth';
 
+import { PrismaClient } from '@prisma/client'
+
+
+export async function prueba() {
+    const prisma = new PrismaClient()
+
+    async function main() {
+        const users = await prisma.user.findMany()
+        // console.log(users)
+    }
+
+    main()
+        .then(async () => {
+            await prisma.$disconnect()
+        })
+        .catch(async (e) => {
+            console.error(e)
+            await prisma.$disconnect()
+            process.exit(1)
+        })
+}
 
 const FormSchema = z.object({
     id: z.string(),

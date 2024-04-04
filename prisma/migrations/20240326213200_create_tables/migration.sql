@@ -53,14 +53,14 @@ VALUES
         '3958dc9e-712f-4377-85e9-fec4b6a6442a',
         '15795',
         'pending',
-        '2022-12-06'
+        '2023-09-15 14:30:45'
     ),
     (
         '2',
-        '3958dc9e-742f-4377-85e9-fec4b6a6442a',
+        '555555e-742f-4377-85e9-fec4b6a6442a',
         '20348',
         'paid',
-        '2022-11-14'
+        '2023-09-15 14:30:45'
     );
 
 INSERT
@@ -73,7 +73,7 @@ VALUES
         '/customers/delba-de-oliveira.png'
     ),
     (
-        '3958dc9e-742f-4377-85e9-fec4b6a6442a',
+        '555555e-742f-4377-85e9-fec4b6a6442a',
         'Lee Robinson',
         'lee@robinson.com',
         '/customers/lee-robinson.png'

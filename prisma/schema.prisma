@@ -19,6 +19,7 @@ model User {
 
 model Invoice {
   id          String   @id @default(uuid())
+  customer    Customer @relation(fields: [customer_id], references: [id])
   customer_id String
   amount      Int
   status      String
@@ -26,10 +27,11 @@ model Invoice {
 }
 
 model Customer {
-  id        String @id @default(uuid())
+  id        String    @id @default(uuid())
   name      String
   email     String
   image_url String
+  invoices  Invoice[]
 }
 
 model Revenue {
